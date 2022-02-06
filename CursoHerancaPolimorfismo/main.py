@@ -19,8 +19,9 @@ if __name__ == "__main__":
               the_good_place, master_of_none, dark, gracie_and_frankie, unbreakable_ks]
 
     favoritos = Playlist("favoritos", midias)
-    print(f'Tamanho da playlist: {len(favoritos)}')
 
     for midia in favoritos:
         midia.dar_likes()
         print(midia)
+
+    print(f'Tamanho da lista de favoritos: {len(favoritos)}')

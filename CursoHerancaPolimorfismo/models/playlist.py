@@ -1,6 +1,19 @@
-class Playlist(list):
-    # Herda da classe list para se tornar um objeto iteravel com propriedades de uma lista
+class Playlist():
 
     def __init__(self, nome, midias):
         self.nome = nome
-        super().__init__(midias)
+        self._midias = midias
+
+    @property
+    def midias(self):
+        return self._midias
+
+# Duck Typing
+
+# Cria um metodo para tornar a classe um iteravel
+    def __getitem__(self, item):
+        return self._midias[item]
+
+# Cria um metodo para retornar o tamanho da lista na classe
+    def __len__(self):
+        return len(self._midias)
